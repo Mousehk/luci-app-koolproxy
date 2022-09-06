@@ -1,0 +1,4 @@
+1|koolproxy.txt|koolproxy.txt|静态规则
+1|daily.txt|daily.txt|每日规则
+1|kp.dat|kp.dat|视频规则
+1|user.txt||自定义规则
