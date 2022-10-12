@@ -134,7 +134,7 @@ update_rules() {
 		wget $url_daily -O /tmp/koolproxy/daily.txt --no-check-certificate
 		if [[ "$?" -eq 0 ]] ; then
 			daily_rule_local=`md5sum $KP_DIR/data/rules/daily.txt | awk '{print $1}'`
-			daily_rule_new=`md5sum /tmp/koolproxy/daily·.txt | awk '{print $1}'`
+			daily_rule_new=`md5sum /tmp/koolproxy/daily.txt | awk '{print $1}'`
 			if [[ "$daily_rule_local" != "$daily_rule_new"  ]]; then
 				mv /tmp/koolproxy/daily.txt $KP_DIR/data/rules/daily.txt
 				echo $(date "+%F %T"): --------------daily规则更新成功 >>$LOGFILE
